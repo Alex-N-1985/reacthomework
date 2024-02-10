@@ -1,6 +1,6 @@
 import "./App.css";
 
-import CheckImg from "./assets/ok-circle.svg";
+import Tag from "./Tag/Tag";
 
 const tagData = [
     "Неограниченное колличество учеников",
@@ -12,14 +12,7 @@ const tagData = [
     "Готовый шаблон для организации обучения",
     "Сообщества",
     "Любое количество уроков и учебных программ"
-]
-
-const Tag = ({Value, Num}) => {        
-    return <div className="tags__item" key = {Num}>
-        {Value}
-        <img src={CheckImg} alt="" />
-    </div>
-}
+];
 
 
 const App = () => {
