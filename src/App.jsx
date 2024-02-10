@@ -14,9 +14,9 @@ const tagData = [
     "Любое количество уроков и учебных программ"
 ]
 
-const tag = (Text) => {        
-    return <div className="tags__item">
-        {Text}
+const Tag = ({Value, Num}) => {        
+    return <div className="tags__item" key = {Num}>
+        {Value}
         <img src={CheckImg} alt="" />
     </div>
 }
@@ -26,12 +26,12 @@ const App = () => {
     let n = tagData.length;
     const arr = []
     for (let i = 0; i < n; i++){
-        arr.push(tag(tagData[i]));
+        arr.push(tagData[i]);        
     }
     return <div className="proposal">
         <h2>Выбирайте Ed Space сегодня и вы получите</h2>
         <div className="tags">
-            {arr}
+            {arr.map((item, index) => <Tag Value={item} key={index}/>)}
         </div>
     </div>
 }
