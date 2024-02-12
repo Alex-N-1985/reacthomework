@@ -1,12 +1,14 @@
 .poscard {
-    width: 400px;
-    height: 320px;
+    width: 360px;
+    height: 280px;
+    padding: 20px;
     color: #2F2A37;
     font-weight: 500;
 }
 
 .poscard p {
     font-size: 14px;
+    width: 360px;
 }
 
 .poscard h3 {

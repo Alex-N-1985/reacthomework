@@ -8,3 +8,5 @@ const PosCard = ({imgs, title, text}) => {
         <p>{text}</p>
     </div>
 }
+
+export default PosCard;

@@ -31,10 +31,11 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  background: linear-gradient(to bottom right, #6BFFCA, silver,#9E00FF);
 }
 
 .poscards h2 {
-  width: 500px;
+  width: 550px;
   font-size: 40px;
   font-weight: 800;
   color: #2F2A37;
@@ -47,4 +48,15 @@
   font-weight: 400;
   color: #6E6C72;
   text-align: center;
+}
+
+.poscards__container {
+  width: 95%;
+  margin-bottom: 50px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  /* flex-wrap: wrap;
+  flex-direction: row;
+  align-items: flex-start; */
+  gap: 30px;
 }
