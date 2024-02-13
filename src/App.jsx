@@ -30,6 +30,7 @@ const App = () => {
                 />
                 )}
             </div>
+            <button className="btnTryFree">Попробовать бесплатно</button>
         </div>
         <div className="proposal">
             <h2>Выбирайте Ed Space сегодня и вы получите</h2>
