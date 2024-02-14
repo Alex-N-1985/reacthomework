@@ -17,27 +17,28 @@ const Modal = ({
     const [phone, setPhone] = useState("");
     const [pdataproc, setPDataProc] = useState(false);
 
-    const closeHandler = () => {
-        setOpenModal(false);
+    const closeHandler = () => {        
         setName("");
         setOrgName("");
         setPosition("");
         setEMail("");
         setPhone("");
         setPDataProc(false);
+        setOpenModal(false);
     }
 
     const handler = (e) => {
-        const data = {
-            name, 
-            orgname, 
-            position, 
-            email, 
-            phone
-        };
-        console.log("Состояние флажка", pdataproc);
-        console.log(data);
-        closeHandler();
+        if (pdataproc){
+            const data = {
+                name, 
+                orgname, 
+                position, 
+                email, 
+                phone
+            };
+            console.log(data);
+            closeHandler();
+        }
     }
 
     return <div className={openModal ? "modal__wrapper active" : "modal__wrapper"}>
@@ -103,10 +104,7 @@ const Modal = ({
                 />
                 <span>Я согласен на обработку моих <u>персональных данных</u></span>
             </div>
-            <button 
-                className="modal__main-button"
-                onClick={handler}
-            >ОТПРАВИТЬ</button>
+            <button className="modal__main-button" onClick={handler} disabled={!pdataproc} >ОТПРАВИТЬ</button>
         </div>
         </div>
 

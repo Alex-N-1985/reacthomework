@@ -44,7 +44,6 @@ const App = () => {
                 {arr.map((item, index) => <Tag value={item} key={index}/>)}
             </div>
         </div>
-        {/* {openModal && <Modal setOpenModal={setOpenModal}/>} */}
         {<Modal openModal={openModal} setOpenModal={setOpenModal}/>}
     </div>
 }
