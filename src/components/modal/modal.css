@@ -5,9 +5,13 @@
     left: 0;
     right: 0;
     bottom: 0;
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
+}
+
+.modal__wrapper.active {
+    display: flex;
 }
 
 .modal {
@@ -54,6 +58,13 @@
 .modal__main label{
     display: grid;
     gap: 8px;
+}
+
+.modal__main label input {
+    height: 1.5rem;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #FFFFFF;
 }
 
 .modal__main-checkbox {

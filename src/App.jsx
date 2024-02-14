@@ -1,13 +1,18 @@
 import "./App.css";
 
+import { useState } from "react"
+
 import Tag from "./components/Tag/Tag";
 import PosCard from "./components/poscard/poscard";
-
 import tagData from "./assets/datas/tagdata.json";
 import PosCards from "./assets/datas/possibilities.json"
 import Modal from "./components/modal/modal";
 
+
 const App = () => {
+
+    const [openModal, setOpenModal] = useState(false);
+
     let n = tagData.length;
     const arr = [], cardData = [];
     for (let i = 0; i < n; i++){
@@ -31,7 +36,7 @@ const App = () => {
                 />
                 )}
             </div>
-            <button className="btnTryFree">Попробовать бесплатно</button>
+            <button className="btnTryFree" onClick={e => setOpenModal(true)} >Попробовать бесплатно</button>
         </div>
         <div className="proposal">
             <h2>Выбирайте Ed Space сегодня и вы получите</h2>
@@ -39,7 +44,7 @@ const App = () => {
                 {arr.map((item, index) => <Tag value={item} key={index}/>)}
             </div>
         </div>
-        <Modal/>
+        {openModal && <Modal setOpenModal={setOpenModal}/>}
     </div>
 }
 
