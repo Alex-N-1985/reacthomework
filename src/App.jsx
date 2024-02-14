@@ -5,6 +5,7 @@ import PosCard from "./components/poscard/poscard";
 
 import tagData from "./assets/datas/tagdata.json";
 import PosCards from "./assets/datas/possibilities.json"
+import Modal from "./components/modal/modal";
 
 const App = () => {
     let n = tagData.length;
@@ -38,6 +39,7 @@ const App = () => {
                 {arr.map((item, index) => <Tag value={item} key={index}/>)}
             </div>
         </div>
+        <Modal/>
     </div>
 }
 
