@@ -1,6 +1,6 @@
-import "./App.css";
-
 import { useState } from "react"
+
+import "./App.css";
 
 import Tag from "./components/Tag/Tag";
 import PosCard from "./components/poscard/poscard";
@@ -44,7 +44,8 @@ const App = () => {
                 {arr.map((item, index) => <Tag value={item} key={index}/>)}
             </div>
         </div>
-        {openModal && <Modal setOpenModal={setOpenModal}/>}
+        {/* {openModal && <Modal setOpenModal={setOpenModal}/>} */}
+        {<Modal openModal={openModal} setOpenModal={setOpenModal}/>}
     </div>
 }
 

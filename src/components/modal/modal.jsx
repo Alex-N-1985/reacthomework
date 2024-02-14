@@ -5,10 +5,10 @@ import "./modal.css";
 import MLogo from "../../assets/images/logo_EdSpase.png";
 import MClose from "../../assets/images/cancel.png";
 
-const Modal = (
+const Modal = ({
     setOpenModal,
     openModal
-) => {
+}) => {
 
     const [name, setName] = useState("");
     const [orgname, setOrgName] = useState("");
@@ -19,12 +19,12 @@ const Modal = (
 
     const closeHandler = () => {
         setOpenModal(false);
-        // setName("");
-        // setOrgName("");
-        // setPosition("");
-        // setEMail("");
-        // setPhone("");
-        // setPDataProc(false);
+        setName("");
+        setOrgName("");
+        setPosition("");
+        setEMail("");
+        setPhone("");
+        setPDataProc(false);
     }
 
     const handler = (e) => {
@@ -35,6 +35,7 @@ const Modal = (
             email, 
             phone
         };
+        console.log("Состояние флажка", pdataproc);
         console.log(data);
         closeHandler();
     }
@@ -96,7 +97,9 @@ const Modal = (
                     type="checkbox" 
                     className="modal__main-checkbox"
                     value={pdataproc}
-                    onChange={ (e) => setPDataProc(e.target.value)} 
+                    onChange={ (e) => {
+                        setPDataProc(e.target.checked);
+                    }} 
                 />
                 <span>Я согласен на обработку моих <u>персональных данных</u></span>
             </div>
