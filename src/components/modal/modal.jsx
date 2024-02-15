@@ -97,7 +97,7 @@ const Modal = ({
                 <input 
                     type="checkbox" 
                     className="modal__main-checkbox"
-                    value={pdataproc}
+                    checked={pdataproc}
                     onChange={ (e) => {
                         setPDataProc(e.target.checked);
                     }} 
