@@ -102,7 +102,7 @@ const Modal = ({
                         setPDataProc(e.target.checked);
                     }} 
                 />
-                <span>Я согласен на обработку моих <u>персональных данных</u></span>
+                <span>Я согласен на обработку моих <a href="">персональных данных</a></span>
             </div>
             <button className="modal__main-button" onClick={handler} disabled={!pdataproc} >ОТПРАВИТЬ</button>
         </div>
